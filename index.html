@@ -1,0 +1,33 @@
+<!DOCTYPE <!DOCTYPE html>
+<html ng-app="friendsList">
+    <head>
+        
+        <title> My first angular app! </title>
+        
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body ng-controller="mainCtrl">
+
+        <form ng-submit="addFriend()">
+
+            <div>
+                <input type="text" placeholder="name" ng-model="newFriend" />
+                <button type="Submit" ng-click="addFriend()"> Add Friend </button>
+            </div>
+
+            <h1>My Friends</h1>
+            <div ng-repeat="friend in friends">
+                <p>{{ friend }}</p>
+            </div>
+        </form>
+
+        <!-- =====script tags that link to needed files...like imports in reactjs===== -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <!-- order is very imperative here. js/app.js imported from js/app.js MUST be below the Angular CDN -->
+        <script src="./js/app.js"></script>
+        <!-- order is very imperative here. js/mainCtrl.js imported from js/mainCtrl.js MUST be below js/app.js -->
+        <script src="./js/mainCtrl.js"></script>
+    </body>
+<p>Woo</p>
+</html>
